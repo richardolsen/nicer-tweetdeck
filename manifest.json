@@ -1,0 +1,18 @@
+ {
+  "name": "Richard's Tweetdeck",
+  "manifest_version": 2,
+  "version": "1",
+  "description": "Customise Tweetdeck",
+  "popup": "popup.html",
+  "background_page": "background.html",
+  "browser_action": {
+    "name": "Hide rubbish",
+    "icons": ["icon.png"],
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [ {
+    "js": [ "jquery.js", "background.js" ],
+    "matches": [ "http://tweetdeck.twitter.com/", "https://tweetdeck.twitter.com/"],
+      "run_at": "document_end"
+  }]
+}
